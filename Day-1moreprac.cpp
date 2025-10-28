@@ -1,3 +1,6 @@
+// Day-1
+// --------------------------------------------------Medium Level----------------------------------------------------------------------------------------------------------
+
 #include<iostream>
 using namespace std;
 
@@ -22,28 +25,40 @@ int main() {
             case 1:
                 cout << "Enter the number of Pens: ";
                 cin >> p;
-                if(p <= 0) { cout << "Invalid quantity!\n"; continue; }
+                if(p <= 0) {
+                    cout << "Invalid quantity!\n"; 
+                    continue; 
+                }
                 pbill = p * pen;
                 break;
 
             case 2:
                 cout << "Enter the number of Notebooks: ";
                 cin >> n;
-                if(n <= 0) { cout << "Invalid quantity!\n"; continue; }
+                if(n <= 0) {
+                    cout << "Invalid quantity!\n"; 
+                    continue; 
+                }
                 nbill = n * notebook;
                 break;
 
             case 3:
                 cout << "Enter the number of Files: ";
                 cin >> f;
-                if(f <= 0) { cout << "Invalid quantity!\n"; continue; }
+                if(f <= 0) { 
+                    cout << "Invalid quantity!\n"; 
+                    continue; 
+                }
                 fbill = f * file;
                 break;
 
             case 4:
                 cout << "Enter the number of Highlighters: ";
                 cin >> h;
-                if(h <= 0) { cout << "Invalid quantity!\n"; continue; }
+                if(h <= 0) { 
+                    cout << "Invalid quantity!\n"; 
+                    continue; 
+                }
                 hbill = h * highlighter;
                 break;
 
