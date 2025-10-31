@@ -704,38 +704,307 @@
 
 
 // Unions-----------------------------------------------------------------------------------------------------------
-#include<iostream>
-using namespace std;
-int main(){
-    enum paytype{hourly=1,monthly};
-    union payment m1;
-    int hr=7,hours,rate;
-    int mr=90000;
-    paytype total;
-    m1.hourly
-    m1.monthly
-    if(paytype=='hourly'){
-        cout<<"Enter the no. of hours worked on a daily basis: "<<endl;
-        cin>>hours;
-        rate=hours*hr;
-        total=hourly;
-    }
-    else if(paytype=='monthly'){
-        cout<<"Your monthly salary is: "<<mr<<endl;
-        total=monthly;
-    }
-    else{
-        cout<<"Wrong input!"<<endl;
-    }
+// #include<iostream>
+// using namespace std;
 
-    switch(total){
-        case hourly:
-            cout<<"Your Salary per day is: "<<hours*hr<<"$"<<endl;
-            break;
-        case monthly:
-            cout<<"Your Salary per month is fixed $"<<mr<<endl;
-            break;
-    }
+// union payment{
+//     int hourlypay;
+//     int monthlypay;
+// };
 
-return 0;
-}
+// int main(){
+//     enum paytype{hourly=1,monthly};
+//     int hr=7,hours;
+//     int mr=90000;
+//     paytype total;
+//     payment m1;
+//     int choice;
+//     cout<<"------------------------------Payroll System----------------------------------\n";
+//     cout<<"Choose Payment System: "<<endl;
+//     cout<<"1. Hourly \n2.Monthly\n";
+//     cout<<"Enter your choice: \n";
+//     cin>>choice;
+//     if(choice==1){
+//         total=hourly;
+//         cout<<"Enter the no. of hours worked on a daily basis: "<<endl;
+//         cin>>hours;
+//         m1.hourlypay=hours*hr;
+//     }
+//     else if(choice==2){
+//         total=monthly;
+//         m1.monthlypay=mr;
+        
+//     }
+//     else{
+//         cout<<"Wrong input!"<<endl;
+//     }
+
+//     switch(total){
+//         case hourly:
+//             cout<<"Payment Type Hourly! "<<endl;
+//             cout<<"Your Salary per day is: "<<m1.hourlypay<<"$"<<endl;
+//             break;
+//         case monthly:
+//             cout<<"Your Salary per month is fixed $"<<m1.monthlypay<<endl;
+//             break;
+//     }
+
+// return 0;
+// }
+// -----------------------------------------------------------------------------------------------------------------------------//
+// Scenario-2
+// #include<iostream>
+// using namespace std;
+
+// union vehicle{
+//     int carhp;
+//     int bikecc;
+//     int busseats;
+// };
+
+// int main(){
+//     enum vehicletype{car=1,bike,bus};
+//     int choice;
+//     int hp=1000,cc=1000,seats=20;
+//     vehicle v1;
+//     vehicletype x;
+//     cout<<"----------------------Welcome to One8 Travels---------------------------------"<<endl;
+//     cout<<"1.Car \n2.Bike \n3.Bus\n";
+//     cout<<"Enter your choice: ";
+//     cin>>choice;
+//     x = static_cast<vehicletype>(choice);
+
+//     if(choice==1){
+//         cout<<"4 seats!"<<endl;
+//         v1.carhp=hp;
+//     }
+//     else if(choice==2){
+//         cout<<"2 seats!"<<endl;
+//         v1.bikecc=cc;
+//     }
+//     else if(choice==3){
+//         cout<<"20 seats!"<<endl;
+//         v1.busseats=seats;
+//     }
+//     else{
+//         cout<<"Wrong input!";
+//     }
+
+//     switch (x)
+//     {
+//     case car:
+//         cout<<"You chose car with "<<v1.carhp<<"hp";
+//         break;
+//     case bike:
+//         cout<<"You chose bike with "<<v1.bikecc<<"cc";
+//         break;
+//     case bus:
+//         cout<<"You chose bus with "<<v1.busseats<<"seats";
+//         break;
+//     default:
+//         break;
+//     }
+// return 0;
+// }
+// ----------------------------------------------------------------------------------------------------------------------------//
+// Scenario-3
+// #include<iostream>
+// #include<cstring> // for strcpy
+// using namespace std;
+
+// union Item {
+//     int damage;
+//     float speedboost;
+//     char itemname[30];
+// };
+
+// int main() {
+//     enum Inventory { DAMAGE = 1, SPEED, ITEM };
+//     Inventory iv;
+//     Item i;
+//     int choice;
+
+//     cout << "---------------------------GAME INVENTORY OPTIMIZATION---------------------------\n";
+//     cout << "Select your option: \n";
+//     cout << "1. DAMAGE \n2. SPEED BOOST \n3. ITEM NAME\n";
+//     cout << "---------------------------------------------------------------------------------\n";
+//     cout << "Enter your choice: ";
+//     cin >> choice;
+
+//     iv = static_cast<Inventory>(choice);
+
+//     switch (iv) {
+//         case DAMAGE:
+//             cout << "You chose DAMAGE.\n";
+//             i.damage = 120;
+//             cout << "Your current health damage is: " << i.damage << " HP\n";
+//             break;
+
+//         case SPEED:
+//             cout << "You chose SPEED BOOST.\n";
+//             i.speedboost = 15.5f;
+//             cout << "Your speed increased to: " << i.speedboost << "x\n";
+//             break;
+
+//         case ITEM:
+//             cout << "You chose ITEM NAME.\n";
+//             strcpy(i.itemname, "Golden Sword");
+//             cout << "You found: " << i.itemname << "!\n";
+//             break;
+
+//         default:
+//             cout << "Invalid choice!\n";
+//             break;
+//     }
+
+//     return 0;
+// }
+
+
+
+// Day-2 Continuation-----------------------------------------------------------------------------------------------------------
+// Scenario-1
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     cout<<"Flow state on!";
+// return 0;
+// }
+
+// Enums and Unions continuation--------------------------------------------------------------------------------------------
+// #include<iostream>
+// using namespace std;
+
+// union devicedata{
+//     int brightness;
+//     float speed;
+//     float temperature;
+// };
+
+// int main(){
+//     enum Devicetype{Light=1,Fan,Thermostat};
+//     devicedata d1;
+//     Devicetype lft;
+//     int n;
+//     char yn;
+//     cout<<"-------------------------------------Smart Device Controller-------------------------------------\n"<<endl;
+//     do{
+//         cout<<"Devices Connected: "<<endl;
+//     cout<<"1.Light \n2.Fan \n3.Thermostat\n";
+//     cout<<"Enter your choice: ";
+//     cin>>n;
+//     lft= static_cast<Devicetype>(n);
+
+//     if(n==1){
+//         cout<<"You selected Light..."<<endl;
+//         cout<<"Set the brightness level(0-100): ";
+//         cin>>d1.brightness;
+//     }
+//     else if(n==2){
+//         cout<<"You selected Fan..."<<endl;
+//         cout<<"Set the fan speed level(0-5): ";
+//         cin>>d1.speed;
+//     }
+//     else if(n==3){
+//         cout<<"You selected Thermostat..."<<endl;
+//         cout<<"Set the Thermostat temperature level: ";
+//         cin>>d1.temperature;
+//     }
+//     else{
+//         cout<<"Invalid choice!";
+//     }
+
+//     switch (lft){
+//         case Light:
+//             cout<<"Your Light is set at Level: "<<d1.brightness<<endl;
+//             break;
+
+//         case Fan:
+//             cout<<"Your Fan is set at Speed: "<<d1.speed<<endl;
+//             break;
+        
+//         case Thermostat:
+//             cout<<"Your Thermostat is set at the temperature: "<<d1.temperature<<endl;
+//             break;
+
+//         default:
+//             cout<<"Invalid Choice! "<<endl;
+//     }
+
+//     cout<<"Do you want to change anything else?(y/n): ";
+//     cin>>yn;
+
+//     }while(yn=='y'||yn=='Y');
+// return 0;
+// }
+
+// Scenario-2
+// #include<iostream>
+// using namespace std;
+
+// union transaction {
+//     float amount;
+//     char chequeno[20];
+//     char upiid[30];
+// };
+
+// int main() {
+//     int total = 1000000;
+//     enum transactiontype { Cash = 1, Cheque, UPI };
+//     transaction t;
+//     transactiontype tt;
+//     float transac = 20000;
+//     float che = 500000;
+//     float wd;
+//     int n;
+//     char yn;
+//     cout << "-----------------------Bank Account Record System-----------------------\n";
+//     do{
+//         cout << "1. Cash \n2. Cheque \n3. UPI\n";
+//         cout << "Select your Transaction Type: ";
+//         cin >> n;
+
+//         tt = static_cast<transactiontype>(n);
+
+//         switch (tt) {
+//             case Cash:
+//                 cout << "You selected Cash.\nYour daily cash limit is Rs 20000.\n";
+//                 cout << "Enter amount to withdraw: ";
+//                 cin >> wd;
+//                 if (wd <= 20000) {
+//                     total -= wd;
+//                     cout << " Amount withdrawn: Rs." << wd << endl;
+//                     cout << "Remaining balance: Rs." << total << endl;
+//                 } else {
+//                     cout << " Exceeded daily limit!" << endl;
+//                 }
+//                 break;
+
+//             case Cheque:
+//                 cout << "You selected Cheque.\nEnter Cheque No.: ";
+//                 cin >> t.chequeno;
+//                 total -= che;
+//                 cout << "Cheque Processed!\n";
+//                 cout << "Cheque No.: " << t.chequeno << endl;
+//                 cout << "Amount debited: Rs." << che << endl;
+//                 cout << "Remaining balance: Rs." << total << endl;
+//                 break;
+
+//             case UPI:
+//                 cout << "You selected UPI.\nEnter UPI ID: ";
+//                 cin >> t.upiid;
+//                 total -= transac;
+//                 cout << " UPI Payment Successful!\n";
+//                 cout << "UPI ID: " << t.upiid << endl;
+//                 cout << "Amount debited: Rs." << transac << endl;
+//                 cout << "Remaining balance: Rs." << total << endl;
+//                 break;
+
+//             default:
+//                 cout << "Invalid choice!" << endl;
+//         }
+//         cout<<"Do you want to check again?(y/n)";
+//         cin>>yn;
+//     }while(yn=='y'||yn=='Y');
+//     return 0;
+// }
