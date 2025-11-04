@@ -113,7 +113,7 @@ int main(){
                 // Group discount
                 if(total_tickets >= 5){
                     discount += group_discount;
-                    cout<<"🎉 Group booking discount applied (10%)\n";
+                    cout<<"Group booking discount applied (10%)\n";
                 }
 
                 // Membership discount
